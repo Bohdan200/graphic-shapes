@@ -2,7 +2,6 @@ package classes;
 
 import interfaces.Areable;
 
-// Квадрат
 public class Quad extends Shape implements Areable {
     protected float side;
     protected float area;

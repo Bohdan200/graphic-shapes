@@ -2,7 +2,6 @@ package classes;
 
 import interfaces.Areable;
 
-// Куб - 3 одинаковых стороны
 public class Qube extends Shape implements Areable {
     public int side;
     protected float area;

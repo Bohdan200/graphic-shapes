@@ -1,13 +1,9 @@
 package classes;
 
-import interfaces.Borderable;
-import interfaces.Colorable;
 import interfaces.Drawable;
-import interfaces.Surface;
 
 import java.util.Arrays;
 
-//implements Drawable
 public class Shape implements Drawable {
     public String name;
     public Point[] coords;

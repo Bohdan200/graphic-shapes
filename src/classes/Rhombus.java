@@ -2,7 +2,6 @@ package classes;
 
 import interfaces.Areable;
 
-// Ромб
 public class Rhombus extends Shape implements Areable {
     protected float side;
     protected float area;

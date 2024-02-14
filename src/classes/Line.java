@@ -1,7 +1,5 @@
 package classes;
-// Линия, отрезок между двумя точками
 public class Line extends Shape {
-//    public Point[] coords = new Point[2];
     protected float side;
     public Line(String name, String color, Point[] coords) {
         super(name, color, coords, 0, "None");
