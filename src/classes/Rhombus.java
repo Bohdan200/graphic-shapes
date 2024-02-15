@@ -1,10 +1,11 @@
 package classes;
 
+import constants.Figures;
 import interfaces.Areable;
 
 public class Rhombus extends Shape implements Areable {
-    protected float side;
-    protected float area;
+    private final float side;
+    private final float area;
 
 
     public Rhombus(String name, String color, Point[] coords, float borderWidth, String borderColor) {
@@ -34,7 +35,7 @@ public class Rhombus extends Shape implements Areable {
 
 class RhombusTest {
     public static void main(String[] args) {
-        Rhombus rhombus = new Rhombus("Rhombus", "Blue", new Point[]{new Point(30, 30), new Point(60, 30)}, 3, "Orange");
-        rhombus.draw();
+        Figures rhombus = Figures.RHOMBUS;
+        rhombus.getValue();
     }
 }

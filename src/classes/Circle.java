@@ -1,10 +1,11 @@
 package classes;
 
+import constants.Figures;
 import interfaces.Areable;
 
 public class Circle extends Shape implements Areable {
-    public float radius;
-    public float area;
+    private final float radius;
+    private final float area;
 
     public Circle(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         super(name, color, coords, borderWidth, borderColor);
@@ -32,7 +33,7 @@ public class Circle extends Shape implements Areable {
 }
 class CircleTest {
     public static void main(String[] args) {
-        Circle circle = new Circle("Circle", "Skyblue", new Point[]{new Point(100, 100), new Point(200, 120)}, 2, "Yellow");
-        circle.draw();
+        Figures circle = Figures.CIRCLE;
+        circle.getValue();
     }
 }

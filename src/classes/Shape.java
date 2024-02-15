@@ -1,15 +1,16 @@
 package classes;
 
 import interfaces.Drawable;
+import constants.Colors;
 
 import java.util.Arrays;
 
 public class Shape implements Drawable {
-    public String name;
-    public Point[] coords;
-    public String color;
-    public float borderWidth;
-    public String borderColor;
+    protected String name;
+    protected Point[] coords;
+    protected String color;
+    protected float borderWidth;
+    protected String borderColor;
 
     public Shape(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         this.name = name;
@@ -28,7 +29,21 @@ public class Shape implements Drawable {
     }
 
     public void setColor(String color) {
-        this.color = color;
+        for (Colors value : Colors.values()) {
+            if (color.equals(value.getCurrentColor())) {
+                this.color = color;
+                break;
+            }
+        }
+    }
+
+    public void setColor(int color) {
+        for (Colors value : Colors.values()) {
+            if (color == value.getIndexColor()) {
+                this.color = value.getCurrentColor();
+                break;
+            }
+        }
     }
 
     public String getColor() {

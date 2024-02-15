@@ -1,9 +1,10 @@
 package classes;
 
+import constants.Figures;
 import interfaces.Areable;
 
 public class Rectangle extends Shape implements Areable {
-    public float area;
+    private final float area;
     public Rectangle(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         super(name, color, coords, borderWidth, borderColor);
         this.name = name;
@@ -26,7 +27,7 @@ public class Rectangle extends Shape implements Areable {
 
 class RectangleTest {
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle("Rectangle", "Brown", new Point[]{new Point(2, 1), new Point(2, 6), new Point(9, 6), new Point(9, 1)}, 1,"Yellow");
-        rectangle.draw();
+        Figures rectangle = Figures.RECTANGLE;
+        rectangle.getValue();
     }
 }

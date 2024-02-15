@@ -1,10 +1,11 @@
 package classes;
 
+import constants.Figures;
 import interfaces.Areable;
 
 public class Qube extends Shape implements Areable {
-    public int side;
-    protected float area;
+    private final int side;
+    private final float area;
 
     public Qube(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         super(name, color, coords, borderWidth, borderColor);
@@ -33,7 +34,7 @@ public class Qube extends Shape implements Areable {
 
 class QubeTest {
     public static void main(String[] args) {
-        Qube qube = new Qube("Qube", "Green", new Point[]{new Point(100, 100), new Point(100, 150)}, 2, "Brown");
-        qube.draw();
+        Figures qube = Figures.QUBE;
+        qube.getValue();
     }
 }

@@ -1,10 +1,11 @@
 package classes;
 
+import constants.Figures;
 import interfaces.Areable;
 
 public class Quad extends Shape implements Areable {
-    protected float side;
-    protected float area;
+    private final float side;
+    private final float area;
 
 
     public Quad(String name, String color, Point[] coords, float borderWidth, String borderColor) {
@@ -34,7 +35,7 @@ public class Quad extends Shape implements Areable {
 
 class QuadTest {
     public static void main(String[] args) {
-        Quad quad = new Quad("Quad", "Yellow", new Point[]{new Point(100, 100), new Point(100, 150)}, 2, "Green");
-        quad.draw();
+        Figures quad = Figures.QUAD;
+        quad.getValue();
     }
 }
