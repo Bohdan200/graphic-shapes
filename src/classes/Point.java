@@ -8,8 +8,8 @@ import interfaces.Surface;
 import java.util.Objects;
 
 public class Point implements Surface, Colorable, Coordinable {
-    protected float x;
-    protected float y;
+    private float x;
+    private float y;
     private String color = "Black";
 
     public Point(float x, float y) {
@@ -67,8 +67,8 @@ public class Point implements Surface, Colorable, Coordinable {
         return color;
     }
 
-    public void draw() {
-        System.out.println("Draw a point by coordinates: x= " + x + ", y = " + y + " with color " + color + ";" );
+    public String draw() {
+        return "Draw a point by coordinates: x= " + x + ", y = " + y + " with color " + color + ";";
     }
 }
 
@@ -77,6 +77,6 @@ class PointTest {
         Point point = new Point(4, 9);
         point.setColor(8);
         point.setColor("Green");
-        point.draw();
+        System.out.println("point.draw() = " + point.draw());
     }
 }

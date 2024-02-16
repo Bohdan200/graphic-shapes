@@ -6,11 +6,11 @@ import constants.Colors;
 import java.util.Arrays;
 
 public class Shape implements Drawable {
-    protected String name;
-    protected Point[] coords;
-    protected String color;
-    protected float borderWidth;
-    protected String borderColor;
+    private String name;
+    private Point[] coords;
+    private String color;
+    private float borderWidth;
+    private String borderColor;
 
     public Shape(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         this.name = name;
@@ -50,13 +50,8 @@ public class Shape implements Drawable {
         return color;
     }
 
-    public String getCoords() {
-        StringBuilder result = new StringBuilder();
-        Point[] coordsCopy = Arrays.copyOf(coords, coords.length);
-        for (int i = 0; i < coordsCopy.length; i++) {
-            result.append("x").append(i).append(": ").append(coordsCopy[i].x).append(" ").append("y").append(i).append(": ").append(coordsCopy[i].y).append("; ");
-        }
-        return result.toString();
+    public Point[] getCoords() {
+        return Arrays.copyOf(coords, coords.length);
     }
 
     public void setCoords(Point[] coords) {
@@ -68,7 +63,7 @@ public class Shape implements Drawable {
     }
 
     public void setBorderWidth(float borderWidth) {
-        this.borderColor = borderColor;
+        this.borderWidth = borderWidth;
     }
 
     public String getBorderColor() {
@@ -79,7 +74,12 @@ public class Shape implements Drawable {
         this.borderColor = borderColor;
     }
 
-    public void draw() {
-        System.out.println("Draw a figure with parameters: name: " + name + "; color: " + color + "; coordinates: " + getCoords() + "border width: " + borderWidth + "; border color: " + borderColor + ";");
+    public String draw() {
+        StringBuilder shapeCoords = new StringBuilder();
+                for (int i = 0; i < getCoords().length; i++) {
+                    shapeCoords.append("x").append(i).append(": ").append(getCoords()[i].getX()).append(" ").append("y").append(i).append(": ").append(getCoords()[i].getY()).append("; ");
+        }
+
+        return "Draw a figure with parameters: name: " + name + "; color: " + color + "; coordinates: " + shapeCoords.toString() + "border width: " + borderWidth + "; border color: " + borderColor + ";";
     }
 }

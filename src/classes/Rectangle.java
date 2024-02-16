@@ -7,27 +7,29 @@ public class Rectangle extends Shape implements Areable {
     private final float area;
     public Rectangle(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         super(name, color, coords, borderWidth, borderColor);
-        this.name = name;
-        this.color = color;
-        this.coords = coords;
+        this.setName(name);
+        this.setColor(color);
+        this.setCoords(coords);
         this.area = getArea();
-        this.borderWidth = borderWidth;
-        this.borderColor = borderColor;
+        this.setBorderWidth(borderWidth);
+        this.setBorderColor(borderColor);
     }
 
     public float getArea() {
-        return Math.abs((coords[2].x - coords[0].x) * (coords[2].y - coords[0].y));
+        Point firstPoint = getCoords()[0];
+        Point thirdPoint = getCoords()[1];
+        return Math.abs((thirdPoint.getX() - firstPoint.getX()) * (thirdPoint.getY() - firstPoint.getY()));
     }
 
-    public void draw() {
-        super.draw();
-        System.out.println("Area of the figure " + name + " = " + area + ";");
+    public String draw() {
+        String result = super.draw();
+        return result + " area of the figure " + this.getName() + " = " + area + ";";
     }
 }
 
 class RectangleTest {
     public static void main(String[] args) {
         Figures rectangle = Figures.RECTANGLE;
-        rectangle.getValue();
+        System.out.println(rectangle.getValue());
     }
 }

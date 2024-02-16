@@ -16,8 +16,8 @@ public enum Figures {
         this.shape = shape;
     }
 
-    public void getValue() {
-        shape.draw();
+    public String getValue() {
+        return shape.draw();
     }
 
     public void setColor(String color) {
@@ -26,5 +26,7 @@ public enum Figures {
     public void setColor(int color) {
         shape.setColor(color);
     }
+
+    public String getColor() {return shape.getColor(); }
 }
 
