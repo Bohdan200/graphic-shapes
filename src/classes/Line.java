@@ -4,6 +4,7 @@ import constants.Figures;
 
 public class Line extends Shape {
     private final float side;
+
     public Line(String name, String color, Point[] coords) {
         super(name, color, coords, 0, "None");
         this.setName(name);

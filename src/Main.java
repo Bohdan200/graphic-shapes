@@ -19,7 +19,5 @@ public class Main {
         qube.setColor("Yellow");
         qube.setColor(5);
         System.out.println("qube.getColor() = " + qube.getColor());
-
-
     }
 }

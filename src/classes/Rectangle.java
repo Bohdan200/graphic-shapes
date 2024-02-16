@@ -5,6 +5,7 @@ import interfaces.Areable;
 
 public class Rectangle extends Shape implements Areable {
     private final float area;
+
     public Rectangle(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         super(name, color, coords, borderWidth, borderColor);
         this.setName(name);

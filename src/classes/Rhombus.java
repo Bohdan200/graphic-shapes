@@ -7,7 +7,6 @@ public class Rhombus extends Shape implements Areable {
     private final float side;
     private final float area;
 
-
     public Rhombus(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         super(name, color, coords, borderWidth, borderColor);
         this.setName(name);

@@ -7,7 +7,6 @@ public class Quad extends Shape implements Areable {
     private final float side;
     private final float area;
 
-
     public Quad(String name, String color, Point[] coords, float borderWidth, String borderColor) {
         super(name, color, coords, borderWidth, borderColor);
         this.setName(name);

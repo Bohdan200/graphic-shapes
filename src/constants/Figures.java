@@ -1,6 +1,7 @@
 package constants;
 
 import classes.*;
+
 public enum Figures {
     LINE(new Line("Line", "Green", new Point[]{new Point(100, 100), new Point(200, 120)})),
     CIRCLE(new Circle("Circle", "Skyblue", new Point[]{new Point(100, 100), new Point(200, 120)}, 2, "Yellow")),

@@ -11,6 +11,7 @@ public enum Colors {
     BLACK("Black", 6),
     WHITE("White", 7),
     SKYBLUE("Skyblue", 8);
+
     private final String currentColor;
     private final Integer indexColor;
 
